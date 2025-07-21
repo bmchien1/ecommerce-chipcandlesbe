@@ -1,0 +1,9 @@
+export { default as boxRoutes } from "./box";
+export { default as cardRoutes } from "./card";
+export { default as colorRoutes } from "./color";
+export { default as moldRoutes } from "./mold";
+export { default as scentRoutes } from "./scent";
+export { default as categoryRoutes } from "./category";
+export { default as productRoutes } from "./product";
+export { default as billRoutes } from "./bill";
+export { default as reviewRoutes } from "./review";

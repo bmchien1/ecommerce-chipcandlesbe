@@ -1,0 +1,24 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.reviewRoutes = exports.billRoutes = exports.productRoutes = exports.categoryRoutes = exports.scentRoutes = exports.moldRoutes = exports.colorRoutes = exports.cardRoutes = exports.boxRoutes = void 0;
+var box_1 = require("./box");
+Object.defineProperty(exports, "boxRoutes", { enumerable: true, get: function () { return __importDefault(box_1).default; } });
+var card_1 = require("./card");
+Object.defineProperty(exports, "cardRoutes", { enumerable: true, get: function () { return __importDefault(card_1).default; } });
+var color_1 = require("./color");
+Object.defineProperty(exports, "colorRoutes", { enumerable: true, get: function () { return __importDefault(color_1).default; } });
+var mold_1 = require("./mold");
+Object.defineProperty(exports, "moldRoutes", { enumerable: true, get: function () { return __importDefault(mold_1).default; } });
+var scent_1 = require("./scent");
+Object.defineProperty(exports, "scentRoutes", { enumerable: true, get: function () { return __importDefault(scent_1).default; } });
+var category_1 = require("./category");
+Object.defineProperty(exports, "categoryRoutes", { enumerable: true, get: function () { return __importDefault(category_1).default; } });
+var product_1 = require("./product");
+Object.defineProperty(exports, "productRoutes", { enumerable: true, get: function () { return __importDefault(product_1).default; } });
+var bill_1 = require("./bill");
+Object.defineProperty(exports, "billRoutes", { enumerable: true, get: function () { return __importDefault(bill_1).default; } });
+var review_1 = require("./review");
+Object.defineProperty(exports, "reviewRoutes", { enumerable: true, get: function () { return __importDefault(review_1).default; } });
