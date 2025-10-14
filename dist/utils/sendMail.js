@@ -10,7 +10,7 @@ async function sendBillEmail(bill) {
     const transporter = nodemailer_1.default.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.GMAIL_USER || 'hoangbui10052003@gmail.com',
+            user: process.env.GMAIL_USER || 'chipscendle@gmail.com',
             pass: process.env.GMAIL_PASS || 'YOUR_APP_PASSWORD', // Use environment variables for security
         },
     });
@@ -33,7 +33,7 @@ async function sendBillEmail(bill) {
     };
     // Create email content
     const mailOptions = {
-        from: 'Chipscendles <hoangbui10052003@gmail.com>',
+        from: 'Chipscendles <chipscendle@gmail.com>',
         to: bill.email, // Send to customer's email for confirmation
         cc: 'chipscendle@gmail.com', // CC to business for processing
         subject: `Hóa Đơn Đơn Hàng - ${bill.firstName} ${bill.lastName}`,
