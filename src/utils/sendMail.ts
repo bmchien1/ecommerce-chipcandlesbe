@@ -20,7 +20,9 @@ interface OrderItem {
 export async function sendBillEmail(bill: Bill) {
   // Configure transporter with Gmail
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.GMAIL_USER || 'chipscendle@gmail.com',
       pass: process.env.GMAIL_PASS || 'YOUR_APP_PASSWORD', // Use environment variables for security
@@ -96,5 +98,12 @@ export async function sendBillEmail(bill: Bill) {
   };
 
   // Send email
-  await transporter.sendMail(mailOptions);
+  console.log("USER:", process.env.GMAIL_USER);
+  console.log("PASS:", process.env.GMAIL_PASS);
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info.response);
+  } catch (error) {
+    console.error("Email error:", error);
+  }
 }
